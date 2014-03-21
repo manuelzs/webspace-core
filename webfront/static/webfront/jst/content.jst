@@ -1,0 +1,28 @@
+<div id="zoom"><a href="#!/grid/1/<%= place.get('pos_x') %>-<%= place.get('pos_y') %>">Out</a></div>
+<div id="preview-n" class="preview"></div>
+<div id="preview-s" class="preview"></div>
+<div id="preview-e" class="preview"></div>
+<div id="preview-w" class="preview"></div>
+<div id="preview-nw" class="preview"></div>
+<div id="preview-ne" class="preview"></div>
+<div id="preview-se" class="preview"></div>
+<div id="preview-sw" class="preview"></div>
+<div id="main-place">
+<iframe src="<%= place.get('resource') %>"></iframe>
+</div>
+
+<style>
+body{ margin: 0; padding: 0;}
+#zoom {position: fixed; top: 25%; left: 0%; background: #999; border: solid 1px #232323;}
+.preview { display: block; background-color: #EEE; width: 32px; height: 32px;}
+#preview-nw {position: fixed; top: 0%; left: 0%;}
+#preview-n {position: fixed; top: 0%; left: 50%;}
+#preview-ne {position: fixed; top: 0%; right: 0%;}
+#preview-e {position: fixed; top: 50%; right: 0%;}
+#preview-se {position: fixed; bottom: 0%; right: 0%;}
+#preview-s {position: fixed; bottom: 0%; left: 50%;}
+#preview-sw {position: fixed; bottom: 0%; left: 0%;}
+#preview-w {position: fixed; top: 50%; left: 0%;}
+#main-place {width: 100%; height: 100%}
+#main-place iframe {width: 100%; height: 100%; border: none;}
+</style>
